@@ -28,11 +28,11 @@ export default {
   props: {
     interval: {
       type: Number,
-      default: 3000,
+      default: 2000,
     },
     animDuration: {
       type: Number,
-      default: 300,
+      default: 1000,
     },
     moveRatio: {
       type: Number,
@@ -59,7 +59,7 @@ export default {
 
       // 2.开启定时器
       this.startTimer();
-    }, 100);
+    }, 500);
   },
   methods: {
     /**
@@ -174,7 +174,7 @@ export default {
       this.setTransform(moveDistance);
     },
 
-    touchEnd: function (e) {
+    touchEnd: function () {
       // 1.获取移动的距离
       let currentMove = Math.abs(this.distance);
 
